@@ -508,11 +508,11 @@ export default function createListComponent({
       // If there isn't at least one extra item, tab loops back around.
       const overscanBackward =
         !isScrolling || scrollDirection === 'backward'
-          ? Math.max(1, overscanCount)
+          ? Math.max(0, overscanCount)
           : 1;
       const overscanForward =
         !isScrolling || scrollDirection === 'forward'
-          ? Math.max(1, overscanCount)
+          ? Math.max(0, overscanCount)
           : 1;
 
       return [

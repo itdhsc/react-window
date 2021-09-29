@@ -713,11 +713,11 @@ export default function createGridComponent({
       // If there isn't at least one extra item, tab loops back around.
       const overscanBackward =
         !isScrolling || verticalScrollDirection === 'backward'
-          ? Math.max(1, overscanCountResolved)
+          ? Math.max(0, overscanCountResolved)
           : 1;
       const overscanForward =
         !isScrolling || verticalScrollDirection === 'forward'
-          ? Math.max(1, overscanCountResolved)
+          ? Math.max(0, overscanCountResolved)
           : 1;
 
       return [
